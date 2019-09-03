@@ -5,7 +5,11 @@ public class Main {
         int time = 25;
         Car car = new Car(4);
         Road road = new Road();
-        road.setRoadArray();
+        int[] roadArray = new int[road.roads];
+        for (int i=0; i<road.roads;i++){
+            roadArray[i] = road.roadSegements;
+        }
+        System.out.println(road.roadArray[0]);
         for (int value : road.roadArray) {
             TrafficLight trafficLight = new TrafficLight();
             for (int i = 0; i<time; i++) {
