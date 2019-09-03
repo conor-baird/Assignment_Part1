@@ -7,7 +7,9 @@ public class Main {
         Road road = new Road();
         int[] roadArray = new int[road.roads];
         for (int i=0; i<road.roads;i++){
-            roadArray[i] = road.roadSegements;
+            for (int j=0; j<road.roadSegements; j++) {
+                roadArray[i] = j;
+            }
         }
         System.out.println(road.roadArray[0]);
         for (int value : road.roadArray) {

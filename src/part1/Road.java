@@ -25,7 +25,7 @@ public class Road {
 
     public Road(){
         roads = 3;
-        roadSegements = 10;
+        roadSegements = new int[]{10, 20, 30};
     }
 
 }
