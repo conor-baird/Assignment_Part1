@@ -22,6 +22,15 @@ public class Road {
         this.roadSegements = roadSegements;
     }
 
+    public void setRoadArray(){
+        System.out.println(roads);
+        System.out.println(roadSegements);
+        int[] roadArray = new int[roads];
+        for (int i=0; i<roads;i++){
+            roadArray[i] = roadSegements;
+        }
+    }
+
     public Road(){
         roads = 3;
         roadSegements = 10;

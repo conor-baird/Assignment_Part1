@@ -27,10 +27,15 @@ public class Car {
         this.carStartPosition = carStartPosition;
     }
 
+    public void moveCar(){
+        carStartPosition += 1;
+        carEndPosition += 1;
+    }
 
-    public Car(int carLength, int carEndPosition){
+
+    public Car(int carLength){
         setCarLength(carLength);
-        setCarEndPosition(carEndPosition);
+        setCarEndPosition(0);
         setCarStartPosition(carLength);
 
 
