@@ -5,14 +5,7 @@ public class Main {
         int time = 25;
         Car car = new Car(4);
         Road road = new Road();
-        int[] roadArray = new int[road.roads];
-        for (int i=0; i<road.roads;i++){
-            for (int j=0; j<road.roadSegements; j++) {
-                roadArray[i] = j;
-            }
-        }
-        System.out.println(road.roadArray[0]);
-        for (int value : road.roadArray) {
+        for (int value : road.roadSegements) {
             TrafficLight trafficLight = new TrafficLight();
             for (int i = 0; i<time; i++) {
                 System.out.println(" Car Position " + car.carStartPosition + "-" + car.carEndPosition+ " "+trafficLight.lightColorArray[trafficLight.lightColor]);
@@ -25,7 +18,7 @@ public class Main {
                 }
                 trafficLight.lightColorArray[trafficLight.lightColor] = "Green";
             }
-            car.carStartPosition -= (value-car.carLength);
+            car.carStartPosition = car.carLength;
             car.carEndPosition = 0;
         }
     }
