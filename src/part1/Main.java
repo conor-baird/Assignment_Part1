@@ -3,8 +3,9 @@ package part1;
 public class Main {
     public static void main(String[] args){
         int time = 25;
-        Car car = new Car(4);
-        Road road = new Road();
+        Car car = new Car(3);
+        Road road = new Road(3, new int[]{10, 20, 30});
+
         for (int value : road.roadSegements) {
             TrafficLight trafficLight = new TrafficLight();
             for (int i = 0; i<time; i++) {
@@ -18,8 +19,7 @@ public class Main {
                 }
                 trafficLight.lightColorArray[trafficLight.lightColor] = "Green";
             }
-            car.carStartPosition = car.carLength;
-            car.carEndPosition = 0;
+            car.setCarToOriginalPos();
         }
     }
 }

@@ -24,7 +24,12 @@ public class Car {
     }
 
     public void setCarStartPosition(int carStartPosition) {
-        this.carStartPosition = carStartPosition;
+        if (carLength<=1){
+            this.carStartPosition = 0;
+        }
+        else {
+            this.carStartPosition = carStartPosition;
+        }
     }
 
     public void moveCar(){
@@ -32,15 +37,21 @@ public class Car {
         carEndPosition += 1;
     }
 
+    public void setCarToOriginalPos(){
+        if (carLength<=1){
+            carStartPosition = 0;
+            carEndPosition =0 ;
+        }
+        else {
+            carStartPosition = carLength;
+            carEndPosition = 0;
+        }
+    }
 
     public Car(int carLength){
         setCarLength(carLength);
         setCarEndPosition(0);
         setCarStartPosition(carLength);
-
-
-
-
     }
 
 }
