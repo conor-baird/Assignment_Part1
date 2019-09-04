@@ -10,12 +10,11 @@ public class Main {
             TrafficLight trafficLight = new TrafficLight();
             for (int i = 0; i<time; i++) {
                 System.out.println(" Car Position " + car.carStartPosition + "-" + car.carEndPosition+ " "+trafficLight.lightColorArray[trafficLight.lightColor]);
-                if (trafficLight.lightColorArray[trafficLight.lightColor].equals("Green")) {
-                    if (car.carStartPosition < value) {
-                        car.moveCar();
-                    } else {
-                        break;
-                    }
+                if (trafficLight.lightColorArray[trafficLight.lightColor].equals("Green")|| car.carStartPosition < value) {
+                    car.moveCar();
+                }
+                else {
+                    break;
                 }
                 trafficLight.lightColorArray[trafficLight.lightColor] = "Green";
             }
