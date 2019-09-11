@@ -3,7 +3,7 @@ package part1;
 public class Road {
     int roads;
     int[] roadSegements;
-    int[] roadArray;
+
 
 
     public int getRoads() {
