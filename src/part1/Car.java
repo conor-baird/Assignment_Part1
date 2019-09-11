@@ -15,6 +15,7 @@ public class Car {
     public int getCarStartPosition() {
         return carStartPosition;
     }
+
     public void setCarLength(int carLength) {
         this.carLength = carLength;
     }
