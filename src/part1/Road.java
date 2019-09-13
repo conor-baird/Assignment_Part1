@@ -1,10 +1,9 @@
 package part1;
 
+// This method sets the number of roads and road segments in each road this will be used in the main class.
 public class Road {
     int roads;
     int[] roadSegements;
-
-
 
     public int getRoads() {
         return roads;

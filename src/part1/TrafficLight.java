@@ -1,6 +1,6 @@
 package part1;
 import java.util.Random;
-// This intialises the traffic lights colour and randomly changes it depending on a rnadom number
+// This intialises the traffic lights colour and randomly changes it depending on a random number
 public class TrafficLight {
     String lightColour;
 
