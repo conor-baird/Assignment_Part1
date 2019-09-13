@@ -1,5 +1,5 @@
 package part1;
-
+// This class sets the car length and uses this integer to determine its start and end position as well as moving th car.
 public class Car {
     int carLength;
     int carStartPosition;
@@ -23,7 +23,8 @@ public class Car {
     public void setCarEndPosition(int carEndPosition) {
         this.carEndPosition = carEndPosition;
     }
-
+    // This method sets the start position of the car depending on it length because if it has length of 1 its
+    // start position needs to be in the 0 segements otherwise the start position can be equal to its length.
     public void setCarStartPosition(int carStartPosition) {
         if (carLength<=1){
             this.carStartPosition = 0;
@@ -37,7 +38,7 @@ public class Car {
         carStartPosition += 1;
         carEndPosition += 1;
     }
-
+    //This method sets the car positions at the start of new road depending on if it length is greater than 1
     public void setCarToOriginalPos(){
         if (carLength<=1){
             carStartPosition = 0;
